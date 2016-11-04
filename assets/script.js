@@ -9,6 +9,12 @@ $( document ).ready(function() {
 });
 
 
+// link to the script files from head.html:
+//
+// <script type="text/javascript" src="/assets/jquery.js"></script>
+// <script type="text/javascript" src="/assets/script.js"></script>
+//
+
 // exercises:
 // when you .hover() over 'h3' elements, change 'background-color' to 'yellow'
 //
