@@ -1,5 +1,40 @@
 $( document ).ready(function() {
 
+// 
+// if user hovers on 'hue' button
+// hue of page changes to new random value
+// proportion = get random number between 0 and 1 - Math.random()
+// hueValue = multiply proportion by 360 
+// 
+// when user clicks on page
+// get horizontal position from event
+// get width of screen
+// divide position by width to get proportion
+// saturationvalue = proportion * 100
+// 
+// get vertical position from event
+// get height of screen
+// divide position by height to get proportion
+// lightnessValue = proportion * 100
+// 
+// plug in three values to css using string concatenation: +
+// change css rule for body with jquery
+// 
+// vertical position measures lightness
+	// if lightness is less than 50
+	if (  ) {
+	// change all typeface to white
+	}
+	// if lightness is more than 50
+	if (   ) {
+	// change all typeface to black
+	}
+// 
+
+});
+/*
+$( document ).ready(function() {
+
 	var yPosition, screenHeight, 
 		saturationRatio, saturationValue, 
 		cssValue, brightnessValue, hueValue;
@@ -44,7 +79,7 @@ $( document ).ready(function() {
 		}
 	);
 });
-/*
+
 var cost = "5";
 var bool = 5===5;
 
