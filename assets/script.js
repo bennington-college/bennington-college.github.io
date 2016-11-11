@@ -1,39 +1,62 @@
 $( document ).ready(function() {
 
-	$('h3').click(
-	  function() {
-	    $('h3').css('font-size', '200px');
-	  }
+	var yPosition, screenHeight, 
+		saturationRatio, saturationValue, 
+		cssValue, brightnessValue, hueValue;
+
+		// initialize brightness value
+		brightnessValue = 50;
+
+	$('body').click(
+		function(event) {
+			// get y value of click
+			yPosition = event.pageY;
+
+			// get height of body element (screen)
+			screenHeight = $('body').height();
+
+			// divide yposition by height to get relative amount
+			saturationRatio = yPosition/screenHeight;
+
+			// multiple that by 100 to get saturation value
+			saturationValue = saturationRatio*100;
+
+			// if the cursor is on the top half of the screen
+			if ( saturationValue > 50 ) {
+			// increase the brightness by 5%
+				brightnessValue = brightnessValue + 5;
+			}
+
+			// if the cursor is on the bottom half of the screen
+			if ( saturationValue < 50 ) {
+			// decrease the brightness by 5%
+				brightnessValue = brightnessValue - 5;
+			}
+
+			hueValue = Math.random() * 360;
+
+			// embed saturation value in css rule
+			cssValue = 'hsl('+hueValue+', '+saturationValue+'%, '+ (brightnessValue)%100 +'%)';
+
+			// change the css value to color w new saturation.
+			$('body').css('background-color', cssValue);
+
+		}
 	);
-
 });
+/*
+var cost = "5";
+var bool = 5===5;
 
+if (bool) {
+  alert('of course');
+} else {
+  alert('pigs can fly');
+}
 
-// link to the script files from head.html:
-//
-// <script type="text/javascript" src="/assets/jquery.js"></script>
-// <script type="text/javascript" src="/assets/script.js"></script>
-//
-
-// exercises:
-//
-// when you .hover() over 'h3' elements, change 'background-color' to 'yellow'
-//
-// when you click on an element with the class attribute '.wrapper', make it disappear: change 'display' to 'none'
-// 			hint: inside .click method, use $(this).css instead of another $('.wrapper').css
-// 				  to make only the clicked area disappear, instead of all elements labeled class="wrapper"
-// 
-// when you move the mouse over the 'body' element, shift it to the right:
-//		change 'position' to 'relative' and 'left' to '30px'
-//
-// advanced extra exercise:
-// 		make a css rule in style.css for a new class - 
-//	        .label { opacity: 0.5 }
-//      then add and remove it to an element with the .toggleClass() method
-//      you can look up .toggleClass at api.jquery.com to see the signature <- (what input args it needs)
-//
-
-
-
-
-
+var index = 0;
+while (index < 5) {
+  alert('dang it #'+index);
+  index = index + 1;
+}
+*/
