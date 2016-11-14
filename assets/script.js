@@ -2,10 +2,12 @@ $( document ).ready(function() {
 
 	$(document).click(function() {
 
-		// generate random hue, saturation, lightness for page background color
+		// generate random hue
 		var hueValue =  Math.floor(Math.random()*360);
+		// generate (saturation < 80%);
 		var saturationValue = Math.floor(Math.random()*80);
-		var lightnessValue = Math.floor(Math.random()*100);
+		// generate (20% < lightness < 90%);
+		var lightnessValue = Math.floor(Math.random()*70) + 20;
 
 		// splice values into formatted css background-color value, using concatenation operator
 		var cssValue = 'hsl(' + hueValue + ', ' + saturationValue + '%, ' + lightnessValue + '%)';
