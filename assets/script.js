@@ -8,7 +8,7 @@ $( document ).ready(function() {
 		var lightnessValue = Math.floor(Math.random()*100);
 
 		// splice values into formatted css background-color value, using concatenation operator
-		var cssValue = 'hsl(' + hueValue + ', ' + saturationValue + '%, ' + brightnessValue + '%)';
+		var cssValue = 'hsl(' + hueValue + ', ' + saturationValue + '%, ' + lightnessValue + '%)';
 
 		// change the css rule for html element to new background color
 		$('html').css('background-color', cssValue);
