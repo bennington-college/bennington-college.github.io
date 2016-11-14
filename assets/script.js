@@ -4,8 +4,10 @@ $( document ).ready(function() {
 
 		// generate random hue
 		var hueValue =  Math.floor(Math.random()*360);
+
 		// generate (saturation < 50%);
 		var saturationValue = Math.floor(Math.random()*50);
+
 		// generate (20% < lightness < 90%);
 		var lightnessValue = Math.floor(Math.random()*70) + 20;
 
@@ -19,6 +21,7 @@ $( document ).ready(function() {
 		if (lightnessValue<50) {
 			$('*').css('color', 'white');
 			$('a').css('color', 'white');
+
 		// otherwise, use white text
 		} else {
 			$('*').css('color', 'black');
@@ -26,4 +29,5 @@ $( document ).ready(function() {
 		}
 
 	});
+
 });
