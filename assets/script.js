@@ -15,11 +15,11 @@ $( document ).ready(function() {
 
 		// if new background color is light, use black text
 		if (lightnessValue<50) {
-			$('html').css('color', 'black');
+			$('*').css('color', 'black');
 			$('a').css('color', 'black');
 		// otherwise, use white text
 		} else {
-			$('html').css('color', 'white');
+			$('*').css('color', 'white');
 			$('a').css('color', 'white');
 		}
 
