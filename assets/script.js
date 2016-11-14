@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-	$(document).click(
+	$(document).click(function() {
 
 		// generate random hue, saturation, lightness for page background color
 		var hueValue =  Math.floor(Math.random()*360);
