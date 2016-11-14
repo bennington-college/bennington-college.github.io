@@ -13,14 +13,14 @@ $( document ).ready(function() {
 		// change the css rule for html element to new background color
 		$('html, body').css('background-color', cssValue);
 
-		// if new background color is light, use black text
+		// if new background color is dark, use white text
 		if (lightnessValue<50) {
-			$('*').css('color', 'black');
-			$('a').css('color', 'black');
-		// otherwise, use white text
-		} else {
 			$('*').css('color', 'white');
 			$('a').css('color', 'white');
+		// otherwise, use white text
+		} else {
+			$('*').css('color', 'black');
+			$('a').css('color', 'black');
 		}
 
 	});
