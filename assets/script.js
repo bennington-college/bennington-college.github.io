@@ -22,7 +22,7 @@ $( document ).ready(function() {
 			$('*').css('color', 'white');
 			$('a').css('color', 'white');
 
-		// otherwise, use white text
+		// otherwise, use black text
 		} else {
 			$('*').css('color', 'black');
 			$('a').css('color', 'black');
