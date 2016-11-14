@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 		// generate random hue, saturation, lightness for page background color
 		var hueValue =  Math.floor(Math.random()*360);
-		var saturationValue = Math.floor(Math.random()*100);
+		var saturationValue = Math.floor(Math.random()*80);
 		var lightnessValue = Math.floor(Math.random()*100);
 
 		// splice values into formatted css background-color value, using concatenation operator

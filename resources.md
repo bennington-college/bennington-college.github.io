@@ -10,4 +10,5 @@ permalink: /resources/
 - [overview of basic git workflow](http://scottchacon.com/2011/08/31/github-flow.html)  
 - [a css primer](http://www.cssbasics.com/)  
 - [advanced css selectors](http://www.w3schools.com/cssref/trysel.asp)
-- [basic javascript syntax](https://gitbookio.gitbooks.io/javascript/content/)
+- [A Javascript Primer](https://gitbookio.gitbooks.io/javascript/content/)
+- [the jquery API](https://api.jquery.com/)
