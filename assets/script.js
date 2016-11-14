@@ -11,7 +11,7 @@ $( document ).ready(function() {
 		var cssValue = 'hsl(' + hueValue + ', ' + saturationValue + '%, ' + lightnessValue + '%)';
 
 		// change the css rule for html element to new background color
-		$('html').css('background-color', cssValue);
+		$('html, body').css('background-color', cssValue);
 
 		// if new background color is light, use black text
 		if (lightnessValue<50) {
