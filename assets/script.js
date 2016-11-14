@@ -4,8 +4,8 @@ $( document ).ready(function() {
 
 		// generate random hue
 		var hueValue =  Math.floor(Math.random()*360);
-		// generate (saturation < 80%);
-		var saturationValue = Math.floor(Math.random()*80);
+		// generate (saturation < 60%);
+		var saturationValue = Math.floor(Math.random()*60);
 		// generate (20% < lightness < 90%);
 		var lightnessValue = Math.floor(Math.random()*70) + 20;
 
