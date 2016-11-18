@@ -65,5 +65,6 @@ $('body').click( function(event) {
 .character {
 	position: absolute;
 	font-size: 60px;
+	z-index: 2;
 }
 </style>
