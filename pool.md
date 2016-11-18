@@ -33,6 +33,14 @@ var characters = {
 		  	3000
 		);
 	}
+	// change the characters to a random color, using hsl values
+	newColor: function() {
+
+	},
+	// change the character css to a random font-size between 50 and 400%
+	newSize: function() {
+
+	}
 }
 characters.appear(['•','◊','∆']);
 $('body').click( function(event) {
