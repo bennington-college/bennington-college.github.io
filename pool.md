@@ -25,9 +25,7 @@ var characters = {
 	disappear: function() {
 		$('.character').hide();
 	},
-	move: function(destX, destY, count) {
-		var whichChar = Math.floor(Math.random()*characters.count);
-		alert(characters.count);
+	move: function(destX, destY) {/
 		$('.character').animate(
 			{ top: destY, left: destX },
 		  	3000
@@ -36,19 +34,18 @@ var characters = {
 	// characters.newColor();
 	// change the characters to a random color, using hsl values
 	newColor: function() {
-
+		return undefined;
 	},
 	// characters.newSize();
 	// change the character css to a random font-size between 50 and 400%
 	newSize: function() {
-
+		return undefined;
 	}
 }
 characters.appear(['•','◊','∆']);
 $('body').click( function(event) {
-	alert(event.pageX);
-	alert(event.pageY);
-	characters.move(event.pageX, event.pageY, characters.count)
+	alert(event.pageX + " " + event.pageY);
+	characters.move(event.pageX, event.pageY)
 })
 
 </script>
