@@ -30,7 +30,7 @@ var characters = {
 			{ top: destY, left: destX },
 		  	3000
 		);
-	}
+	},
 	// characters.newColor();
 	// change the characters to a random color, using hsl values
 	newColor: function() {
