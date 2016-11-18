@@ -12,3 +12,4 @@ permalink: /resources/
 - [advanced css selectors](http://www.w3schools.com/cssref/trysel.asp)
 - [an overview of basic javascript syntax](https://gitbookio.gitbooks.io/javascript/content/)
 - [the jquery API](https://api.jquery.com/)
+– [https://github.com/bebraw/jswiki/wiki](javascript library wiki)

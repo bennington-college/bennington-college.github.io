@@ -27,17 +27,18 @@ heading: Goals
 - In javascript, everything is an object; the dot operator
 - Using javascript libraries: the API
 
-### Week 4: November 18
+### Week 4: November 11
 - Procedural programming: if statements, loops
 - Pseudocode: separating logic from convention
 
-### Week 5: November 11
-- Functions & methods
-- Asynchronous programming
+### Week 5: November 18
+– Functions and Abstraction
+- Objects and Modularity
 
-### Week 6: November 25
+### Week 6: December 2
+- Debugging code
+
+### Week 7: December 9
 - The Server-Client model and alternatives
 - User content and data
-
-### Week 7: December 2
-- Debugging code
+– REST services
