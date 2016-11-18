@@ -36,6 +36,7 @@ heading: Goals
 - Objects and Modularity
 
 ### Week 6: December 2
+- Objects prototypes and classes
 - Debugging code
 
 ### Week 7: December 9
