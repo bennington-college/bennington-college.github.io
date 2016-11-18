@@ -30,7 +30,16 @@ var characters = {
 			{ top: destY, left: destX },
 		  	3000
 		);
+		// $('.character').each(function(index, el) {
+		// 		$(this).animate   ......						
+		// });
+		.animate(
+			{ top: destY, left: destX },
+		  	3000
+		);
+
 	},
+
 	// characters.newColor();
 	// change the characters to a random color, using hsl values
 	newColor: function() {
