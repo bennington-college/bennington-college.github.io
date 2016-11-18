@@ -32,7 +32,7 @@ heading: Goals
 - Pseudocode: separating logic from convention
 
 ### Week 5: November 18
-– Functions and Abstraction
+- Functions and Abstraction
 - Objects and Modularity
 
 ### Week 6: December 2
