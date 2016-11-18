@@ -33,10 +33,12 @@ var characters = {
 		  	3000
 		);
 	}
+	// characters.newColor();
 	// change the characters to a random color, using hsl values
 	newColor: function() {
 
 	},
+	// characters.newSize();
 	// change the character css to a random font-size between 50 and 400%
 	newSize: function() {
 
