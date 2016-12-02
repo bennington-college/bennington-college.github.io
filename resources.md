@@ -12,9 +12,9 @@ permalink: /resources/
 - [Advanced css selectors](http://www.w3schools.com/cssref/trysel.asp)
 - [An overview of basic javascript syntax](https://gitbookio.gitbooks.io/javascript/content/)
 - [Object oriented programming in js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
-- [The jQuery API](https://api.jquery.com/)
   
 ### Javascript libraries
+- [The jQuery API](https://api.jquery.com/)
 - [jQuery UI: Interactivity, Animations, Widgets](http://jqueryui.com/)
 - [Hammer.js: Touch Gesture Events](https://hammerjs.github.io/)
 - [Mousetrap.js: Keyboard Events](https://craig.is/killing/mice)
