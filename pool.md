@@ -3,68 +3,92 @@ layout: page
 title: Pool
 permalink: /pool/
 ---
+<ul>
+	<li id="new_text">New Text</li>
+</ul>
+<div id="pool">
+    
+</div>
+<script type="text/javascript">
 
-<script>
+// declare namespace object
+var content = {};
 
-var characters = {
-	count: 0,
-	appear: function(menu) {
-		// select a geometric char from array
-		// var menu = ['•','◊','∆'];
+// declare and initialize text prototype object
+content.text = {
 
-		// select random integer from 0-2
-		var dart = Math.random();
-		dart = Math.floor(dart* menu.length );
-		var character = menu[dart];
+	// how many text instances have been created
+    count: 0,
 
-		var idName = 'char-' + this.count++;
-		// insert at the beginning of the body element
-		$('body').prepend('<span class="character" id="' + idName+ '">'  + character + '</span>');
-		// style it with css?
-	},
-	disappear: function() {
-		$('.character').hide();
-	},
-	move: function(destX, destY) {/
-		$('.character').animate(
-			{ top: destY, left: destX },
-		  	3000
-		);
-		// $('.character').each(function(index, el) {
-		// 		$(this).animate   ......						
-		// });
-		.animate(
-			{ top: destY, left: destX },
-		  	3000
-		);
+	// index number
+    index: null,
 
-	},
+	// text content
+    string: null,
 
-	// characters.newColor();
-	// change the characters to a random color, using hsl values
-	newColor: function() {
-		return undefined;
-	},
-	// characters.newSize();
-	// change the character css to a random font-size between 50 and 400%
-	newSize: function() {
-		return undefined;
-	}
+    // jquery reference to page element
+    element: null,
+
+    // define new text instance (content and index)
+    define: function(entry) {
+    	// store text content as object property
+    	this.string = entry;
+
+    	// increment total number of text instances
+		content.text.count++;
+
+		// use new count as index
+		this.index = content.text.count;
+    },
+
+    // place text instance in document
+    place: function() {
+
+    	// place text at end of div with id="pool"
+        $('#pool').append("<span class=\"text\" id=\"text"+ this.index +"\">"+ this.string +"</span>");
+
+        // store jquery reference to new element
+        this.element = $( '#text'+this.index ).eq(0);
+
+        // make draggable with jquery.ui
+        this.element.draggable();
+
+        // use variable to pass 'this' into a different method
+        var thing = this;
+
+        // set event listener for changing text content of this instance
+        this.element.click(function(){
+        	thing.change(prompt('pick again'));
+        });
+    },
+
+    // change content of text instance
+    change: function(newEntry) {
+
+    	// store new text content as object property
+    	this.string = newEntry;
+
+    	// change corresponding text in the html document using jquery .text() method
+        this.element.text(newEntry);
+    }
 }
-characters.appear(['•','◊','∆']);
-$('body').click( function(event) {
-	alert(event.pageX + " " + event.pageY);
-	characters.move(event.pageX, event.pageY)
-})
+
+$("#new_text").click(
+	function() {
+		var newText = Object.create(content.text);
+		newText.define(prompt('enter your text'));
+		newText.place();
+	}
+);
 
 </script>
 
 
 
 <style>
-.character {
-	position: absolute;
-	font-size: 60px;
-	z-index: 2;
+.text {
+	display:block;
+    position: absolute;
+    z-index: 2;
 }
 </style>
