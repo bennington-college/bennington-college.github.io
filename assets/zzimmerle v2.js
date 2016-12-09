@@ -254,20 +254,79 @@ var zzcryptography = {
 	converter: function( text ){
 		var originalText = text;
 	
-		originalText = originalText.replace(/\s+/g, '');
-		originalText = originalText.toLowerCase();
-		originalText = originalText.replace(/[.,/;'\-=`~_+":{}()<>?]/g, "");
-	
-		originalText = originalText.replace('1', 'one');
-		originalText = originalText.replace('2', 'two');
-		originalText = originalText.replace('3', 'three');
-		originalText = originalText.replace('4', 'four');
-		originalText = originalText.replace('5', 'five');
-		originalText = originalText.replace('6', 'six');
-		originalText = originalText.replace('7', 'seven');
-		originalText = originalText.replace('8', 'eight');
-		originalText = originalText.replace('9', 'nine');
-		originalText = originalText.replace('0', 'zero');
+		//originalText = originalText.replace(/\s+/g, '');
+		//originalText = originalText.toLowerCase();
+		//originalText = originalText.replace(/[.,/;'\-=`~_+":{}()<>?]/g, "");
+
+		//template:
+		//originalText = originalText.replace('', '');
+
+		var onesPlace = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+		var tenthPlace = [undefined, 'teen', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+		//remove punctuation
+		originalText = originalText.replace('. ', 'period'); //replace periods but leave out decimals
+		originalText = originalText.replace(', ', 'comma');
+		originalText = originalText.replace('? ', 'question mark');
+		originalText = originalText.replace('! ', 'exclamation point');
+		originalText = originalText.replace('; ', 'semicolon');
+		originalText = originalText.replace(': ', 'colon');
+
+		originalText = originalText.replace('(', 'open parenthesis');
+		originalText = originalText.replace(')', 'closed parenthesis');
+
+		originalText = originalText.replace('[', 'open brackets');
+		originalText = originalText.replace(']', 'closed brackets');
+
+		originalText = originalText.replace('{', 'open curly brackets');
+		originalText = originalText.replace('}', 'closed curly brackets');
+
+		originalText = originalText.replace('$', 'dollars');
+		originalText = originalText.replace('+', 'plus');
+		originalText = originalText.replace('=', 'equals');
+		
+		originalText = originalText.replace(/\u2013|\u2014/g, 'dash');
+
+		var dArray = originalText.filter(/\./ + /\d+/);
+		var dCount = dArray.length;
+		if (dCount > 0) {
+			var dIndex;
+			var d;
+			var dI;
+			var dI2;
+			var dInitialLength;
+
+			for (var i = 0; i < decimalCount; i++) {
+				dI = dArray[i];
+				dIndex = originalText.indexof(dI);
+				dInitialLength = dI.length;
+
+				dI2 = dI.replace(/\./, 'point');
+
+				for (var i2 = 0; i2 < onesPlace.length; i2++) {
+					dI2 = dI2.replace(i2, onesPlace[i2]);
+				}
+				originalText = originalText.replace(dI, dI2);
+			}
+		}
+		var nArray = originalText.filter(/\d+/);
+		var nCount = nArray.length;
+		if (nCount > 0) {
+			var n;
+			var nReplacement = '';
+			for (var i = 0; i < nCount; i++) {
+				n = nArray[i];
+
+
+
+				
+				//FINISH THIS
+
+
+
+
+			}
+		}
 	
 	  	var convertedText = originalText.split("");
 	  	return convertedText;
