@@ -10,6 +10,7 @@ permalink: /pool/
     
 </div>
 <script type="text/javascript">
+$( document ).ready(function() {
 	$("#new_text").click(
 		function() {
 			var newText = Object.create(content.text);
@@ -17,6 +18,17 @@ permalink: /pool/
 			newText.place();
 		}
 	);
+
+	
+	$(document).click(
+		function() {
+		var newEle = Object.create(content.ele);
+			newEle.birth();
+			newEle.follow();
+			}
+	);
+
+});
 </script>
 
 
