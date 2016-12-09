@@ -6,6 +6,16 @@ permalink: /resources/
 
 **<a href="https://github.com/bennington-college/bennington-college.github.io/invitations">Invite link for this repo</a>**
 
+**Command line input to start local server:**
+
+```
+cd /path/to/codebase 		tip: *drag destination folder from Finder to Terminal window*
+jekyll build --watch
+jekyll serve   				*output will show an ip address - paste into browser*
+	
+```
+
+
 ### Further Reading
 - [An html primer](http://htmldog.com/guides/html/beginner)  
 - [A guide to git on the command line](https://rogerdudler.github.io/git-guide/)  
