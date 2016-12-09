@@ -4,6 +4,8 @@ title: Resources
 permalink: /resources/
 ---
 
+- [invite link for this repo](https://github.com/bennington-college/bennington-college.github.io/invitations)  
+
 ### Further Reading
 - [An html primer](http://htmldog.com/guides/html/beginner)  
 - [A guide to git on the command line](https://rogerdudler.github.io/git-guide/)  
