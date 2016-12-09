@@ -4,7 +4,7 @@ title: Resources
 permalink: /resources/
 ---
 
-- [invite link for this repo](https://github.com/bennington-college/bennington-college.github.io/invitations)  
+**<a href="https://github.com/bennington-college/bennington-college.github.io/invitations">Invite link for this repo</a>**
 
 ### Further Reading
 - [An html primer](http://htmldog.com/guides/html/beginner)  
