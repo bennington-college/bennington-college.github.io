@@ -1,3 +1,4 @@
+// dependency: 
 
 content.ele = {
 
@@ -11,6 +12,10 @@ content.ele = {
         this.string = "🐘";
         content.ele.count++;
         this.index = content.ele.count;
+
+        var newText = Object.create(content.text);
+        newText.define('😁');
+        newText.place();
 
 
         $('#pool').append("<span class=\"ele\">"+ this.string +"</span>");
