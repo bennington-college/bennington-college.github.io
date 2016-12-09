@@ -9,9 +9,9 @@ permalink: /resources/
 **Command line input to start local server:**
 
 ```
-cd /path/to/codebase 		tip: *drag destination folder from Finder to Terminal window*
+cd /path/to/codebase    tip: *drag folder from Finder to Terminal window*
 jekyll build --watch
-jekyll serve   				*output will show an ip address - paste into browser*
+jekyll serve            *output will show an ip address - paste into browser*
 	
 ```
 
