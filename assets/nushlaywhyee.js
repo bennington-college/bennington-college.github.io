@@ -21,7 +21,7 @@ content.image = {
     place: function() {
 
         // insert image in #content using jquery
-        $( "#content" ).prepend( '<img src="/assets/image1.jpg" alt=" soccer Picture ">' );
+        $( "#content" ).prepend( '<img src="/assets/image1.jp.jpg" alt=" soccer Picture ">' );
 
     },
 
