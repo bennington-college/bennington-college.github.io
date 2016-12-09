@@ -8,12 +8,13 @@ content.character = {
 
         var idName = 'char-' + this.count++;
         $('body').prepend('<span class="character" id="' + idName+ '">'  + character + '</span>');
+        $('.character').css('position','fixed');
     },
     disappear: function() {
         $('.character').hide();
     },
     move: function(destX, destY, count) {
-        var whichChar = Math.floor(Math.random()*characters.count);
+        var whichChar = Math.floor(Math.random()*this.count);
         $('.character').animate(
             { top: destY, left: destX },
             3000
@@ -26,30 +27,34 @@ content.character = {
     newSize: function() {
         $('.character').css('font-size',Math.floor(Math.random()*350)+50+'%');
     },
-
     runProper: function () {
         this.appear(['•']);
 
+        var theThing=this;
+
         $('.character').dblclick( function(event) {
-            hoverable=!hoverable;
+            theThing.hoverable=!theThing.hoverable;
         });
-
         $('.character').mouseenter( function(event) {
-            if(hoverable)
+            if(theThing.hoverable)
             {
-                this.newColor(0, 100, 50);
+                theThing.newColor(0, 100, 50);
             }
-        })
-
+        });
         $('.character').mouseleave( function(event) {
-            if(hoverable)
+            if(theThing.hoverable)
             {
-                this.newColor(0, 0, 0);
+                theThing.newColor(0, 0, 0);
             }
-        })
-
+        });
         $('body').click( function(event) {
-            this.move(event.pageX, event.pageY, this.count);
-    }
+            theThing.move(event.pageX, event.pageY, theThing.count);
+        });
+    },
+};
 
-}
+$( document ).ready(function() {
+
+content.character.runProper();
+
+})
